@@ -1,15 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Visualizator msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Visualizator from './components/Visualizator.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Visualizator
+  },
+  created(){
+    this.$store.dispatch('retrievePeople')
   }
 }
 </script>
@@ -23,4 +25,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+
+
 </style>
